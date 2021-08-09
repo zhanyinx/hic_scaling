@@ -11,8 +11,8 @@ st.title("Scaling visualisation app")
 
 # Samples
 list_samples = {
+    "dataset_august_2021": "https://drive.google.com/uc?export=download&id=1kTuTQlcHnJNrmShCPnQMadI0cT5km3DA",
     "dataset_july_2021": "https://drive.google.com/uc?export=download&id=1o2oT2uBrRZ55cRzaQFe8KWRKPG3P75Lb",
-    "dataset_august_2021": "https://drive.google.com/uc?export=download&id=1k1dVkCUt4BT9rlBCMHtJzdQUjg6UJWJQ",
 }
 
 
