@@ -13,6 +13,7 @@ st.title("Scaling visualisation app")
 list_samples = {
     "dataset_august_2021": "https://drive.google.com/uc?export=download&id=1kTuTQlcHnJNrmShCPnQMadI0cT5km3DA",
     "dataset_july_2021": "https://drive.google.com/uc?export=download&id=1o2oT2uBrRZ55cRzaQFe8KWRKPG3P75Lb",
+    "dataset_nazerke_0821": "https://drive.google.com/uc?export=download&id=142zoJLBuHOwUMni8RRndqjwXEI3y_Y51",
 }
 
 
@@ -34,8 +35,11 @@ data = original_data.copy()
 
 
 # choose stage and mutant to compare
-stages = st.sidebar.multiselect("Select the stages", list(data["stg"].unique()))
-data = data[data["stg"].isin(stages)]
+try:
+    stages = st.sidebar.multiselect("Select the stages", list(data["stg"].unique()))
+    data = data[data["stg"].isin(stages)]
+except:
+    data["stg"]="na"
 
 mutants = st.sidebar.multiselect("Select the conditions", list(data["sample"].unique()))
 data = data[data["sample"].isin(mutants)]
