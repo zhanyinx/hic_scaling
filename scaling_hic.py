@@ -40,7 +40,7 @@ try:
     stages = st.sidebar.multiselect("Select the stages", list(data["stg"].unique()))
     data = data[data["stg"].isin(stages)]
 except:
-    data["stg"] = "na"
+    data["stg"] = "stg_na"
 
 mutants = st.sidebar.multiselect("Select the conditions", list(data["sample"].unique()))
 data = data[data["sample"].isin(mutants)]
@@ -76,3 +76,14 @@ st.markdown(
     download_csv(data, "table.csv", "Download data used in the plot"),
     unsafe_allow_html=True,
 )
+
+df = pd.DataFrame()
+
+for condition in data["condition"].unique():
+    subset = data[data["condition"] == condition]
+    res = fit_alpha_d(subset, 1e5, 6e5)
+    res["condition"] = condition
+    df = pd.concat([df, res])
+
+# Display and download link of table
+st.dataframe(df)
