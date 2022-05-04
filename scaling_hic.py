@@ -11,6 +11,7 @@ st.title("Scaling visualisation app")
 
 # Samples
 list_samples = {
+    "dataset_may_2022": "https://drive.google.com/uc?export=download&id=1Qc9jCuj7bL9J6dFQPW56meXWeEkrmmow",
     "dataset_august_2021": "https://drive.google.com/uc?export=download&id=1kTuTQlcHnJNrmShCPnQMadI0cT5km3DA",
     "dataset_july_2021": "https://drive.google.com/uc?export=download&id=1o2oT2uBrRZ55cRzaQFe8KWRKPG3P75Lb",
     "dataset_nazerke_0821": "https://drive.google.com/uc?export=download&id=142zoJLBuHOwUMni8RRndqjwXEI3y_Y51",
@@ -39,7 +40,7 @@ try:
     stages = st.sidebar.multiselect("Select the stages", list(data["stg"].unique()))
     data = data[data["stg"].isin(stages)]
 except:
-    data["stg"]="na"
+    data["stg"] = "na"
 
 mutants = st.sidebar.multiselect("Select the conditions", list(data["sample"].unique()))
 data = data[data["sample"].isin(mutants)]
