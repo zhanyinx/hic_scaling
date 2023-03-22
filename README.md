@@ -1,5 +1,6 @@
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://zhanyinx-hic-scaling-scaling-hic-geuryt.streamlit.app/)
 [![](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
+[![GitHub code licence is MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)]
 
 # Visualise scaling of contact probability given Hi-C data
 
@@ -14,3 +15,19 @@ CSV file with required 3 columns: int, dist, sample
 - sample: sample id
 - [stg] : stage (time)
 
+## Local instance
+
+To have a local instance of the app, install streamlit and the requirements
+
+```bash
+
+conda env create -n hic_scaling --file environment.yml
+conda activate hic_scaling
+pip install streamlit
+```
+
+To run the app
+
+```bash
+streamlit run path2/scaling_hic.py
+```
