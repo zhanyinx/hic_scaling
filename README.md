@@ -1,6 +1,7 @@
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://zhanyinx-hic-scaling-scaling-hic-geuryt.streamlit.app/)
 [![](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![GitHub code licence is MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)]
+[![Not Maintained](https://img.shields.io/badge/Maintenance%20Level-Not%20Maintained-yellow.svg)](https://gist.github.com/cheerfulstoic/d107229326a01ff0f333a1d3476e068d)
 
 # Visualise scaling of contact probability given Hi-C data
 
